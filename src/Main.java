@@ -1,9 +1,13 @@
 import br.com.dio.desafio.dominio.Bootcamp;
 import br.com.dio.desafio.dominio.Curso;
 import br.com.dio.desafio.dominio.Dev;
+import br.com.dio.desafio.dominio.Forum;
 import br.com.dio.desafio.dominio.Mentoria;
+import br.com.dio.desafio.dominio.Topico;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,6 +25,16 @@ public class Main {
         mentoria.setTitulo("mentoria de java");
         mentoria.setDescricao("descrição mentoria java");
         mentoria.setData(LocalDate.now());
+        
+        Topico topico = new Topico();
+        topico.setTitulo("Materia de Estudos");
+        topico.setTexto("Ola, gostaria que me sugerisse algum guia de material de estudo");
+        
+        List<Topico> list = new ArrayList<Topico>();
+        list.add(topico);
+        
+        Forum forum = new Forum();
+        forum.setTopicos(list);
 
         /*System.out.println(curso1);
         System.out.println(curso2);
@@ -32,6 +46,8 @@ public class Main {
         bootcamp.getConteudos().add(curso1);
         bootcamp.getConteudos().add(curso2);
         bootcamp.getConteudos().add(mentoria);
+        
+        bootcamp.setForum(forum);
 
         Dev devCamila = new Dev();
         devCamila.setNome("Camila");
