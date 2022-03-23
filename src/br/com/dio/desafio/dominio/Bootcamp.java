@@ -13,6 +13,7 @@ public class Bootcamp {
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
+    private Forum forum;
 
 
     public String getNome() {
@@ -53,6 +54,14 @@ public class Bootcamp {
 
     public void setConteudos(Set<Conteudo> conteudos) {
         this.conteudos = conteudos;
+    }
+    
+    public Forum getForum() {
+        return forum;
+    }
+
+    public void setForum(Forum forum) {
+        this.forum = forum;
     }
 
     @Override
